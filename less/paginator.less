@@ -2,7 +2,8 @@
 @import "./colors.less";
 
 ul.navigator{
-    
+    display: flex;
+    justify-content: center;
     li {
         display: flex;
         align-items: center;
@@ -12,9 +13,20 @@ ul.navigator{
         border: 1px solid @color_ceramic;  
         border-radius: 5px;
         display: inline-block;
+        padding: 0px 10px;
+        i {
+            font-weight: 700;
+            font-size: 2rem;
+            width: 20px;
+            margin-left: -10px;
+        }
         &:hover {
             background-color: @color_ceramic;
             color: @color_slate;
+        }
+        &.active{
+            color: @color_ceramic;
+            background-color: @color_coffee;
         }
     }
 

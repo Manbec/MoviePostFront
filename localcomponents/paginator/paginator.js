@@ -4,8 +4,8 @@ moviepost.directive('mppaginator', ['$http', 'EnvironmentConfig', function ($htt
    
     var link = function (scope, elem, attrs) {
         // Data display variables
-        scope.dataDict = {};
-        scope.page = 1;
+        scope.dataDict = {}; // Movies are storesd for faster acces purpose
+        scope.page = 1; // Current page that is being requested/loaded/displayed
         scope.total_results = -1;
         scope.total_pages = -1;
 
@@ -40,7 +40,6 @@ moviepost.directive('mppaginator', ['$http', 'EnvironmentConfig', function ($htt
                 scope.dataDict[scope.page] = response.data.results;
                 /*console.log("dict");
                 console.log(scope.dataDict);*/
-                console.log(scope.page < scope.total_pages);
                 
             }, function errorCallback(response) {
 
@@ -51,9 +50,50 @@ moviepost.directive('mppaginator', ['$http', 'EnvironmentConfig', function ($htt
 
         }
 
-        scope.$watch('page', scope.pageChange);
-        scope.pageChange = function(){
-            
+        scope.$watch('page', function(){
+            window.scrollTo(0, 0);
+            if(!scope.dataDict[scope.page]){
+                scope.loadResults();
+            }
+        });
+
+        scope.firstPage = function() {
+            scope.page = 1;
+        }
+
+        scope.prevPage = function() {
+            if(scope.page > 1){
+                scope.page -= 1;
+            }
+        }
+
+        scope.toPage = function(pageNumber) {
+            if(pageNumber > 0 && pageNumber < scope.total_pages){
+                scope.page = pageNumber
+            }
+        }
+
+        scope.nextPage = function() {
+            if(scope.page < scope.total_pages){
+                scope.page += 1;
+            }
+        }
+        scope.lastPage = function() {
+            console.log(scope.total_pages);
+            scope.page = scope.total_pages;
+        }
+
+        scope.availablePageNumbers = function() {
+            var smallestPrev = scope.page-4;
+            smallestPrev = smallestPrev < 1 ? 1 : smallestPrev;
+            var biggestNext = scope.page+4;
+            biggestNext = biggestNext > scope.total_pages ? scope.total_pages : biggestNext;
+
+            var pagesNumbers = []
+            for(var i = smallestPrev; i <= biggestNext; i++){
+                pagesNumbers.push(i);
+            }
+            return pagesNumbers;
         }
 
         angular.element(document).ready(function () {

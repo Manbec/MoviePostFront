@@ -8,7 +8,8 @@ var moviepost = angular.module('moviepost',
     "moviepost.breadcrumb",
     "moviepost.footer",
     "moviepost.loader",
-    "moviepost.paginator"
+    "moviepost.paginator",
+    "moviepost.topten"
   ]);
 
 moviepost.commons = {}
