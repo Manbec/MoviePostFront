@@ -1,0 +1,28 @@
+{
+  "global": {
+    "version": "0.1.0",
+    "moviesApiKey": "dc58753025de257fbcecfef595460d03"
+   },
+  "env": {
+    "local": {
+      "EnvironmentConfig": {
+        "views": "local",
+        "appdomain":"movieposts.loc",
+        "api": "http://api.movieposts.loc",
+        "cdn": "http://cdn.movieposts.loc",
+        "maintenance": false,
+        "minifyhtml": false
+      }
+    },
+    "dist": {
+      "EnvironmentConfig": {
+        "views": "dist",
+        "appdomain":"moviepost.com",
+        "api": "https://api.moviepost.com",
+        "cdn": "https://cdn.moviepost.com",
+        "maintenance": true,
+        "minifyhtml": true
+      }
+    }
+  }
+}

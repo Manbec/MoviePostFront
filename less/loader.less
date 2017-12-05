@@ -1,0 +1,51 @@
+
+@import "./colors.less";
+
+mploader.flex-center{
+    min-height: 100px;
+    width: 100%;
+}
+
+.loading-div {
+
+    i {
+        position: absolute;
+        width: 20px !important;
+        height: 20px !important;
+        margin:-12px 0 0 -12px;
+        -webkit-animation:bounce 1s linear infinite;
+        -moz-animation:bounce 1s linear infinite;
+        animation:bounce 1s linear infinite;
+    }
+
+    .loading-container-preloader {
+        position: absolute;
+        width: 90px !important;
+        height: 90px !important;
+        margin:-45px 0 0 -45px;
+        z-index: 1000;
+        -webkit-animation:spin 2s linear infinite !important;
+        -moz-animation:spin 2s linear infinite !important;
+        animation:spin 2s linear infinite !important;
+        &:nth-of-type(2){
+            width: 70px !important;
+            height: 70px !important;
+            margin:-35px 0 0 -35px;
+            -webkit-animation:spin 4s linear infinite !important;
+            -moz-animation:spin 4s linear infinite !important;
+            animation:spin 4s linear infinite !important;
+        };
+        &:nth-of-type(3){
+            width: 50px !important;
+            height: 50px !important;
+            margin:-25px 0 0 -25px;
+            -webkit-animation:spinback 4s linear infinite !important;
+            -moz-animation:spinback 4s linear infinite !important;
+            animation:spinback 4s linear infinite !important;
+        };
+    }
+
+    .spinner-latte-only {
+        border-color: @color_latte;
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "moviepost",
+  "authors": [
+    "Manbec <manuel_bm@outlook.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "private",
+  "homepage": "moviepost.loc",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "angular-translate": "^2.15.1",
+    "angular": "angularjs#1.6.7",
+    "angular-route": "^1.6.4"
+  },
+  "resolutions": {
+    "angular": "1.6.7"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "moviepost",
+  "version": "0.0.0",
+  "description": "Find your favorite movies and save them for later",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "angular-route": "^1.6.4",
+    "browser-sync": "^2.18.8",
+    "connect-history-api-fallback": "^1.3.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-less": "^3.3.2",
+    "gulp-ng-config": "^1.5.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-watch": "^4.3.11",
+    "run-sequence": "^1.2.2"
+  },
+  "scripts": {
+    "test": "sudo gulp test"
+  },
+  "keywords": [
+    "movies"
+  ],
+  "author": "Manbec",
+  "license": "ISC"
+}

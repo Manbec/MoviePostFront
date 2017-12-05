@@ -1,0 +1,41 @@
+<mpnavbar></mpnavbar>
+<mpbreadcrumb></mpbreadcrumb>
+<div class="back-img" id="mainbackimg"></div>
+<div id="login-container" class="container valign-wrapper flex-center">
+  <div class="row">
+    <div class="input-field col m8 offset-m2 s12 valign-wrapper">
+      <div class="card-panel">
+        <div class="row no-margin">
+          <!--img -->
+          <div class="col s8 offset-s2 center">
+            <i class="material-icons login-profile">account_circle</i>
+          </div>
+        </div>
+        <form class="col s12" ng-submit="checkLogin()">
+          <div class="row">
+            <div class="input-field col s12">
+              <input id="email" type="text" class="validate" ng-model="email">
+              <label for="first_name">Email</label>
+            </div>
+            <div class="input-field col s12">
+              <input id="passw" type="password" class="passw" ng-model="passw">
+              <label for="password">Password</label>
+            </div>
+            <div class="input-field col s12" ng-show="isSignUp()">
+              <input id="passw" type="password" class="passw" ng-model="passw">
+              <label for="password">Password</label>
+            </div>
+          </div>
+          <div class="row valign-wrapper flex-center">
+            <button ng-hide="loading" class="btn waves-effect waves-light" type="submit" name="action"><span ng-hide="isSignUp()">Ingresar</span><span ng-show="isSignUp()">Create Account</span>
+            <i class="material-icons right">send</i>
+          </button>
+          </div>
+          <a class="btn transparent slate-text waves-effect waves-light" ng-click="toggleAccessType()"><span ng-hide="isSignUp()">Don't have an account?</span><span ng-show="isSignUp()">I already have an accont</span></a>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+<mpfooter></mpfooter>

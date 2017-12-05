@@ -1,0 +1,10 @@
+/*
+ *  Natural & Versatile palette
+ */
+nav {
+  background: #626D71;
+  padding: 0px 15px;
+}
+nav .nav-wrapper .breadcrumb {
+  text-transform: capitalize;
+}

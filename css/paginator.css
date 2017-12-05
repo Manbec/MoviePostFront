@@ -1,0 +1,17 @@
+/*
+ *  Natural & Versatile palette
+ */
+ul.navigator li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #626D71;
+  color: #CDCDC0;
+  border: 1px solid #CDCDC0;
+  border-radius: 5px;
+  display: inline-block;
+}
+ul.navigator li:hover {
+  background-color: #CDCDC0;
+  color: #626D71;
+}

@@ -1,0 +1,182 @@
+/*
+ *  Natural & Versatile palette
+ */
+/*@font-face {
+    font-family: myFirstFont;
+    src: url(css/Montserrat/Montserrat-Regular.ttf);
+}*/
+/* 
+ *  Main Font for all devices
+ */
+@font-face {
+  font-family: "Montserrat";
+  src: url('../css/Montserrat/montserrat-v12-latin-100.eot');
+  src: url('../css/Montserrat/montserrat-v12-latin-100.eot?#iefix') format('embedded-opentype'), url('../css/Montserrat/montserrat-v12-latin-100.woff') format('woff'), url('../css/Montserrat/montserrat-v12-latin-100.ttf') format('truetype'), url('../css/Montserrat/montserrat-v12-latin-100.svg#') format('svg');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url('../css/Montserrat/montserrat-v12-latin-200.eot');
+  src: url('../css/Montserrat/montserrat-v12-latin-200.eot?#iefix') format('embedded-opentype'), url('../css/Montserrat/montserrat-v12-latin-200.woff') format('woff'), url('../css/Montserrat/montserrat-v12-latin-200.ttf') format('truetype'), url('../css/Montserrat/montserrat-v12-latin-200.svg') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url('../css/Montserrat/montserrat-v12-latin-300.eot');
+  src: url('../css/Montserrat/montserrat-v12-latin-300.eot?#iefix') format('embedded-opentype'), url('../css/Montserrat/montserrat-v12-latin-300.woff') format('woff'), url('../css/Montserrat/montserrat-v12-latin-300.ttf') format('truetype'), url('../css/Montserrat/montserrat-v12-latin-300.svg') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url('../css/Montserrat/montserrat-v12-latin-regular.eot');
+  src: url('../css/Montserrat/montserrat-v12-latin-regular.eot?#iefix') format('embedded-opentype'), url('../css/Montserrat/montserrat-v12-latin-regular.woff') format('woff'), url('../css/Montserrat/montserrat-v12-latin-regular.ttf') format('truetype'), url('../css/Montserrat/montserrat-v12-latin-regular.svg') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url('../css/Montserrat/montserrat-v12-latin-500.eot');
+  src: url('../css/Montserrat/montserrat-v12-latin-500.eot?#iefix') format('embedded-opentype'), url('../css/Montserrat/montserrat-v12-latin-500.woff') format('woff'), url('../css/Montserrat/montserrat-v12-latin-500.ttf') format('truetype'), url('../css/Montserrat/montserrat-v12-latin-500.svg') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url('../css/Montserrat/montserrat-v12-latin-600.eot');
+  src: url('../css/Montserrat/montserrat-v12-latin-600.eot?#iefix') format('embedded-opentype'), url('../css/Montserrat/montserrat-v12-latin-600.woff') format('woff'), url('../css/Montserrat/montserrat-v12-latin-600.ttf') format('truetype'), url('../css/Montserrat/montserrat-v12-latin-600.svg') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url('../css/Montserrat/montserrat-v12-latin-700.eot');
+  src: url('../css/Montserrat/montserrat-v12-latin-700.eot?#iefix') format('embedded-opentype'), url('../css/Montserrat/montserrat-v12-latin-700.woff') format('woff'), url('../css/Montserrat/montserrat-v12-latin-700.ttf') format('truetype'), url('../css/Montserrat/montserrat-v12-latin-700.svg') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url('../css/Montserrat/montserrat-v12-latin-800.eot');
+  src: url('../css/Montserrat/montserrat-v12-latin-800.eot?#iefix') format('embedded-opentype'), url('../css/Montserrat/montserrat-v12-latin-800.woff') format('woff'), url('../css/Montserrat/montserrat-v12-latin-800.ttf') format('truetype'), url('../css/Montserrat/montserrat-v12-latin-800.svg') format('svg');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url('../css/Montserrat/montserrat-v12-latin-900.eot');
+  src: url('../css/Montserrat/montserrat-v12-latin-900.eot?#iefix') format('embedded-opentype'), url('../css/Montserrat/montserrat-v12-latin-900.woff') format('woff'), url('../css/Montserrat/montserrat-v12-latin-900.ttf') format('truetype'), url('../css/Montserrat/montserrat-v12-latin-900.svg') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+/* 
+ *  Animations 
+ */
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinback {
+  100% {
+    -moz-transform: rotate(-720deg);
+  }
+}
+@-webkit-keyframes spinback {
+  100% {
+    -webkit-transform: rotate(-720deg);
+  }
+}
+@keyframes spinback {
+  100% {
+    -webkit-transform: rotate(-720deg);
+    transform: rotate(-720deg);
+  }
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+/*
+    Text color standarization
+ */
+.slate-text {
+  color: #626D71 !important;
+}
+.ceramic-text {
+  color: #CDCDC0 !important;
+}
+.latte-text {
+  color: #DDBC95 !important;
+}
+.coffee-text {
+  color: #B38867 !important;
+}
+body {
+  font-family: 'Montserrat', 'Lato', sans-serif;
+}
+body .center {
+  text-align: center;
+}
+body .flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .row.no-margin {
+  margin: 0px;
+}
+body blockquote {
+  border-left: 5px solid #DDBC95;
+}
+body blockquote span:nth-child(1) {
+  font-style: italic;
+}
+body h1.hot,
+body h2.hot,
+body h3.hot,
+body h4.hot,
+body h5.hot,
+body h6.hot {
+  font-weight: 500;
+  text-shadow: 1px 1px 5px #B38867;
+}
+body #mainbackimg {
+  background: url('../images/pexels-photo-cinema-min.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+body .back-img {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -20;
+  opacity: 0.6;
+}
+body div[ng-view] {
+  background-image: -webkit-linear-gradient(bottom left, rgba(222, 222, 224, 0.9) 0%, rgba(255, 255, 255, 0.9) 45%, rgba(240, 240, 240, 0.6) 60%);
+  background-image: -moz-linear-gradient(bottom left, rgba(222, 222, 224, 0.9) 0%, rgba(255, 255, 255, 0.9) 45%, rgba(240, 240, 240, 0.6) 60%);
+  background-image: -o-linear-gradient(bottom left, rgba(222, 222, 224, 0.9) 0%, rgba(255, 255, 255, 0.9) 45%, rgba(240, 240, 240, 0.6) 60%);
+  background-image: linear-gradient(to top right, rgba(222, 222, 224, 0.9) 0%, rgba(255, 255, 255, 0.9) 45%, rgba(240, 240, 240, 0.6) 60%);
+}
