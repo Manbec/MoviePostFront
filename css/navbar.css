@@ -8,3 +8,15 @@ nav {
 nav .nav-wrapper .breadcrumb {
   text-transform: capitalize;
 }
+nav .nav-wrapper ul li a {
+  display: flex;
+  align-content: center;
+}
+nav .nav-wrapper ul li a img {
+  margin-top: 15px;
+  margin-right: 10px;
+  max-height: 30px;
+}
+nav .nav-wrapper ul form {
+  display: inline-block;
+}
