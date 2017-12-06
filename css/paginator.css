@@ -18,6 +18,11 @@
 #paginator-listing .card-stacked .card-action a:hover img {
   opacity: 0.5;
 }
+#paginator-listing .card-stacked .card-action a span.saved-caption {
+  color: #626D71;
+  font-size: 0.7rem;
+  margin-left: 10px;
+}
 ul.navigator {
   display: flex;
   justify-content: center;
