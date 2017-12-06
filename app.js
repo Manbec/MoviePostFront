@@ -3,6 +3,8 @@ var moviepost = angular.module('moviepost',
   ["ngRoute",
     "moviepost.config",
     "moviepost.main",
+    "moviepost.mymovies",
+    "moviepost.search",
     "moviepost.login",
     "moviepost.navbar",
     "moviepost.breadcrumb",
@@ -130,7 +132,6 @@ moviepost.config(['$routeProvider', '$locationProvider', '$httpProvider', '$prov
     return sessionStorage.getItem("Authorization") != undefined;
   }
   $rootScope.moviesApiKey = moviesApiKey;
-  console.log("apikey: " + moviesApiKey);
 
   $rootScope.moviesApiConfig = localStorage.getItem("moviesApiConfig");
   var moviesApiConfigUrl = "https://api.themoviedb.org/3/configuration"
@@ -145,12 +146,11 @@ moviepost.config(['$routeProvider', '$locationProvider', '$httpProvider', '$prov
 
     }).then(function successCallback(response) {
 
-      console.log("Config");
+      //console.log("Config");
       //console.log(response.data);
       $rootScope.moviesApiConfig = response.data;
-      console.log($rootScope.moviesApiConfig);
+      
       if(!$rootScope.$$phase){
-        console.log("apply");
         $rootScope.apply();
       }
 
