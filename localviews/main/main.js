@@ -12,6 +12,9 @@ moviepost.config(['$routeProvider', 'EnvironmentConfig', function ($routeProvide
 
 moviepost.controller('MainCtrl', ['$scope', '$http' , function ($scope, $http) {
   
+  // Popular movies docs: https://developers.themoviedb.org/3/movies/get-popular-movies
+  // Basic request: https://api.themoviedb.org/3/movie/550?api_key=dc58753025de257fbcecfef595460d03
+
   $scope.popularMoviesUrl = "https://api.themoviedb.org/3/movie/popular";
 
 }]);
