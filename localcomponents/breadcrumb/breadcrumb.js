@@ -14,7 +14,6 @@ moviepost.controller('BreadcrumbController', ['$scope', '$location', 'Environmen
     $scope.navLocations = locations.filter(function (location) {
         return location.length > 0;
     });
-    console.log($scope.navLocations);
 
     // Go to location link on a different depth
 
