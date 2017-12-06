@@ -21,7 +21,7 @@
                         <p>Lorem ipsum dolor bla bla bla hamet isum.</p>
                     </div>
                     <div class="card-action">
-                        <a href="#">Favorite </a>
+                        <a href="#">Buy</a>
                     </div>
                 </div>
             </div>
@@ -29,7 +29,7 @@
     </div>
     <div class="row">
         <div class="col l8 m8 s12">
-            <mppaginator api-url="popularMoviesUrl" api-key="moviesApiKey" api-config="moviesApiConfig"/>
+            <mppaginator api-url="popularMoviesUrl" favorites-api-url="userFavoritesUrl" api-key="moviesApiKey" api-config="moviesApiConfig" save-favorite-func="saveFavoriteMovie"  delete-favorite-func="deleteFavoriteMovie" favorites-auth-token="authToken"/>
         </div>
         <div class="col l4 m4 s12">
             <mptopten />
