@@ -8,8 +8,8 @@
       "EnvironmentConfig": {
         "views": "local",
         "appdomain":"movieposts.loc",
-        "api": "http://api.movieposts.loc",
-        "cdn": "http://cdn.movieposts.loc",
+        "api": "http://api.moviepost.loc",
+        "cdn": "http://cdn.moviepost.loc",
         "maintenance": false,
         "minifyhtml": false
       }
