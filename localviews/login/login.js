@@ -32,7 +32,6 @@ moviepost.controller('LoginCtrl', ['$rootScope', '$scope', '$http', '$location',
   }
 
   $scope.doLogin = function () {
-    console.log(EnvironmentConfig.api);
     $http({
       method: 'POST',
       url: EnvironmentConfig.api + '/mplogin',
@@ -40,6 +39,7 @@ moviepost.controller('LoginCtrl', ['$rootScope', '$scope', '$http', '$location',
         email: $scope.email,
         password: $scope.password
       },
+      ignoreDuplicateRequest: false,
       rejectDuplicateRequest: true,
       requestId: 'user-login'
     }).then(function successCallback(response) {
@@ -57,7 +57,7 @@ moviepost.controller('LoginCtrl', ['$rootScope', '$scope', '$http', '$location',
       console.log(response.data);*/
 
       if (response.status == 400) {
-        Materialize.toast('Datos incorrectos', 2000) // 4000 is the duration of the toast
+        Materialize.toast('Incorrect Access', 2000) // 4000 is the duration of the toast
       }
       else {
         Materialize.toast('Error de conexión', 4000) // 4000 is the duration of the toast
@@ -81,15 +81,20 @@ moviepost.controller('LoginCtrl', ['$rootScope', '$scope', '$http', '$location',
       requestId: 'user-register'
     }).then(function successCallback(response) {
 
-      console.log("Register");
-      console.log(response.data);
+      /*console.log("Register");
+      console.log(response.data);*/
+
+      sessionStorage.setItem("Authorization", response.data);
+      $location.path("/");
+      $scope.$apply();
 
     }, function errorCallback(response) {
 
-      console.log("Register Error");
-      console.log(response.data);
+      /*console.log("Register Error");
+      console.log(response.data);*/
+
       if (response.status == 400) {
-        Materialize.toast('Datos incorrectos', 2000) // 4000 is the duration of the toast
+        Materialize.toast('Incomplete Data', 2000) // 4000 is the duration of the toast
       }
       else {
         Materialize.toast('Error de conexión', 4000) // 4000 is the duration of the toast
