@@ -13,7 +13,13 @@ moviepost.controller('TopTenController', ['$scope', '$location', 'EnvironmentCon
     $scope.floatSelf = false;
     $scope.scrollReached = function () {
         
-        var topTenPositionY = document.getElementById('topten-frame').offsetTop;
+        var topTenFrame = document.getElementById('topten-frame');
+        if(!topTenFrame){
+            window.removeEventListener("scroll", $scope.scrollReached);
+            return;
+        }
+        
+        var topTenPositionY = topTenFrame.offsetTop;
         var windowScrolledY = window.pageYOffset;
         
         if ($scope.floatSelf != (windowScrolledY >= topTenPositionY)) {
