@@ -27,12 +27,15 @@ moviepost.directive('mppaginator', ['$http', 'EnvironmentConfig', function ($htt
                     api_key: scope.apiKey,
                     language: scope.language,
                     page: scope.page
-                }
+                },
+                ignoreDuplicateRequest: true,
+                rejectDuplicateRequest: true,
+                requestId: 'fetch-paginator-data'
 
             }).then(function successCallback(response) {
 
-                /*console.log("Movies");
-                console.log(response.data);*/
+                console.log("Movies");
+                console.log(response.data);
                 scope.loading = false;
 
                 scope.total_results = response.data.total_results;
@@ -107,6 +110,10 @@ moviepost.directive('mppaginator', ['$http', 'EnvironmentConfig', function ($htt
                 scope.loadResults();
             }
         })
+        
+        scope.imageUrl = function(data){
+            return scope.apiConfig.images.secure_base_url+scope.apiConfig.images.poster_sizes[2]+data.poster_path;
+        }
 
     }
     

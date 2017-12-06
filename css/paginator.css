@@ -1,6 +1,23 @@
 /*
  *  Natural & Versatile palette
  */
+#paginator-listing .card-stacked .card-content p {
+  max-height: 7rem;
+  overflow-y: scroll;
+}
+#paginator-listing .card-stacked .card-action a {
+  display: flex;
+  align-items: center;
+}
+#paginator-listing .card-stacked .card-action a img {
+  max-height: 1.5rem;
+  display: inline;
+  margin-left: 10px;
+  transition: opacity 0.25s;
+}
+#paginator-listing .card-stacked .card-action a:hover img {
+  opacity: 0.5;
+}
 ul.navigator {
   display: flex;
   justify-content: center;

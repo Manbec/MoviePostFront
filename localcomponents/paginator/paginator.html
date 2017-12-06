@@ -3,7 +3,7 @@
     <div id="paginator-listing">
         <div ng-repeat="data in dataDict[page]" class="card horizontal">
             <div class="card-image">
-                <img ng-src="{{apiConfig.images.secure_base_url+apiConfig.images.poster_sizes[5]+data.poster_path}}">
+                <img ng-src="{{imageUrl(data)}}">
             </div>
             <div class="card-stacked">
                 <div class="card-content">
@@ -11,7 +11,7 @@
                     <p>{{data.overview}}</p>
                 </div>
                 <div class="card-action">
-                    <a href="#">Get!</a>
+                    <a class="waves-effect" href="#">Favorite!<img ng-src="images/favorite/empty_black100.png"/></a>
                 </div>
             </div>
         </div>
